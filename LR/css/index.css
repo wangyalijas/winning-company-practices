@@ -80,11 +80,10 @@ body{
     height: 0.5rem;
 }
 .gou{
-    background: green;
+    /*background: green;*/
     display: none;
 }
 .cha{
-    background: red;
     display: none;
 }
 .loginDContent > .password input{

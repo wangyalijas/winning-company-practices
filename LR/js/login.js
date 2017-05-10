@@ -29,16 +29,24 @@ window.onload = function () {
 function checkPhoneNumber() {
     // console.log(this)
     var phone_number = document.querySelector('#phone_number');
+    var gou=phone_number.nextElementSibling;
+    var cha=phone_number.nextElementSibling.nextElementSibling;
     if (phoneNumberVerifier(phone_number.value)) {
         // 现实勾
-        console.log('1实打实的｀');
-
+        console.log('1');
+        cha.style.display='none'
+        gou.style.display='inline-block'
     } else {
         // 不显示
         console.log('0')
+        gou.style.display='none'
+        cha.style.display='inline-block'
     }
 
 }
+
+// var phone_number=document.querySelector('#phone_number');
+// phone_number.addEventListener()
 
 function phoneNumberVerifier(phone_number) {
 
