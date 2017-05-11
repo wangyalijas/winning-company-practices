@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "phone_number": 18556518092,
+      "password": "password"
+    },
+    {
+      "phone_number": 12345678901,
+      "password": "password"
+    }
+  ]
+}
