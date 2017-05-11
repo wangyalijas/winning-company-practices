@@ -18,25 +18,23 @@ window.onload = function () {
 
             this.id = 'active';
             Ocon[this.index].id = 'block';
-            // console.log(Ocon)
-            // console.log(this)
-            // console.log(this.index)
         }
     }
 };
 
-var url= '/winning-company-practices/LR/data/user.json';
- fetch(url).then(function (blob) {
-    blob.json();
-})
-    .then(function (data) {
-        console.log(data);
-    });
+// var url= '/winning-company-practices/LR/data/user.json';
+//  fetch(url).then(function (blob) {
+//     blob.json();
+// })
+//     .then(function (data) {
+//         console.log(data);
+//     });
+
 function checkPhoneNumber(obj) {
     var gou=obj.nextElementSibling;
     var cha=gou.nextElementSibling;
     if (phoneNumberVerifier(obj.value)) {
-        // 现实勾
+        // 显示勾
         console.log('1');
         cha.style.display='none'
         gou.style.display='inline-block'
@@ -56,3 +54,15 @@ function phoneNumberVerifier(phone_number) {
     return patrn.test(phone_number);
 
 }
+
+
+//保存localstorage
+function saveStorage() {
+    var phone_number = document.getElementById("phone_number").value;
+    localStorage.setItem("phone_number",phone_number);
+    var password = document.getElementById("password").value;
+    localStorage.setItem("password",password);
+    console.log(localStorage)
+}
+
+saveStorage();
