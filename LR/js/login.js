@@ -25,13 +25,17 @@ window.onload = function () {
     }
 };
 
-
-function checkPhoneNumber() {
-    // console.log(this)
-    var phone_number = document.querySelector('#phone_number');
-    var gou=phone_number.nextElementSibling;
-    var cha=phone_number.nextElementSibling.nextElementSibling;
-    if (phoneNumberVerifier(phone_number.value)) {
+var url= '/winning-company-practices/LR/data/user.json';
+ fetch(url).then(function (blob) {
+    blob.json();
+})
+    .then(function (data) {
+        console.log(data);
+    });
+function checkPhoneNumber(obj) {
+    var gou=obj.nextElementSibling;
+    var cha=gou.nextElementSibling;
+    if (phoneNumberVerifier(obj.value)) {
         // 现实勾
         console.log('1');
         cha.style.display='none'
@@ -45,8 +49,6 @@ function checkPhoneNumber() {
 
 }
 
-// var phone_number=document.querySelector('#phone_number');
-// phone_number.addEventListener()
 
 function phoneNumberVerifier(phone_number) {
 
