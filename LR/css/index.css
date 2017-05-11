@@ -79,8 +79,11 @@ body{
     width: 0.5rem;
     height: 0.5rem;
 }
+.loginDContent > .telephone img,.loginDContent > .password img{
+    width: 0.5rem;
+    height: 0.5rem;
+}
 .gou{
-    /*background: green;*/
     display: none;
 }
 .cha{
