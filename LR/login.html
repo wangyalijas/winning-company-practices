@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>登录</title>
     <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -14,7 +15,7 @@
                 <img src="images/左箭头.svg" alt="" class="leftjiantou">
             </div>
             <div class="titleMiddle floatL">登录</div>
-            <div class="titleRight floatL">注册</div>
+            <a href="register.html"><div class="titleRight floatL">注册</div></a>
         </div>
         <!--切换菜单-->
         <div class="clearfix header">
@@ -48,8 +49,8 @@
                 </div>
             </div>
         </div>
-        <button>登录</button>
-        <a href="" class="forget">忘记密码</a>
+        <button onclick="login()">登录</button>
+        <a href="forget_password.html" class="forget">忘记密码</a>
     </div>
 </body>
 <script src="js/login.js"></script>
